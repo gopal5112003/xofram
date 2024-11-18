@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>XOFram</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+      <style>
+                      
+     
+                    
+                      
+         .d-flex {
+           display: -webkit-box;
+           display: -ms-flexbox;
+           display: flex;
+         }
+         
+         .align-center {
+           -webkit-box-align: center;
+           -ms-flex-align: center;
+           align-items: center;
+         }
+         
+         .flex-centerY-centerX {
+           justify-content: center;
+           -webkit-box-pack: center;
+           -ms-flex-pack: center;
+           justify-content: center;
+           -webkit-box-align: center;
+           -ms-flex-align: center;
+           align-items: center;
+         }
+
+         .page-wrapper {
+           height: 100%;
+           display: table;
+         }
+         
+         .page-wrapper .page-inner {
+           display: table-cell;
+           vertical-align: middle;
+         }
+         
+         .el-wrapper {
+           width: 360px;
+           padding: 20px;
+           margin: 15px auto;
+           background-color: #fff;
+         }
+         
+         @media (max-width: 991px) {
+           .el-wrapper {
+             width: 345px;
+           }
+         }
+         
+         @media (max-width: 767px) {
+           .el-wrapper {
+             width: 290px;
+             margin: 30px auto;
+           }
+         }
+         
+         .el-wrapper:hover .h-bg {
+           left: 0px;
+         }
+         
+         .el-wrapper:hover .price {
+           left: 20px;
+           -webkit-transform: translateY(-50%);
+           -ms-transform: translateY(-50%);
+           -o-transform: translateY(-50%);
+           transform: translateY(-50%);
+           color: #818181;
+         }
+         
+         .el-wrapper:hover .add-to-cart {
+           left: 50%;
+         }
+         
+         .el-wrapper:hover .img {
+           webkit-filter: blur(7px);
+           -o-filter: blur(7px);
+           -ms-filter: blur(7px);
+           filter: blur(7px);
+           filter: progid:DXImageTransform.Microsoft.Blur(pixelradius='7', shadowopacity='0.0');
+           opacity: 0.4;
+         }
+         
+         .el-wrapper:hover .info-inner {
+           bottom: 155px;
+         }
+         
+         .el-wrapper:hover .a-size {
+           -webkit-transition-delay: 300ms;
+           -o-transition-delay: 300ms;
+           transition-delay: 300ms;
+           bottom: 50px;
+           opacity: 1;
+         }
+         
+         .el-wrapper .box-down {
+           width: 100%;
+           height: 60px;
+           position: relative;
+           overflow: hidden;
+         }
+         
+         .el-wrapper .box-up {
+           width: 100%;
+           height: 300px;
+           position: relative;
+           overflow: hidden;
+           text-align: center;
+         }
+         
+         .el-wrapper .img {
+           padding: 20px 0;
+           -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+           -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+           -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+           transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+           /* ease-out */
+           -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           /* ease-out */
+         }
+         
+         .h-bg {
+           -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+           -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+           -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+           transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+           /* ease-out */
+           -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           /* ease-out */
+           width: 660px;
+           height: 100%;
+           background-color: #9d1515;
+           position: absolute;
+           left: -659px;
+         }
+         
+         .h-bg .h-bg-inner {
+           width: 50%;
+           height: 100%;
+           background-color: #464646;
+         }
+         
+         .info-inner {
+           -webkit-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+           -moz-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+           -o-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+           transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+           /* ease-out */
+           -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           /* ease-out */
+           position: absolute;
+           width: 100%;
+           bottom: 25px;
+         }
+         
+         .info-inner .p-name,
+         .info-inner .p-company {
+           display: block;
+         }
+         
+         .info-inner .p-name {
+           font-family: 'PT Sans', sans-serif;
+           font-size: 18px;
+           color: #000000;
+         }
+         
+         .info-inner .p-company {
+           font-family: 'Lato', sans-serif;
+           font-size: 12px;
+           text-transform: uppercase;
+           color: #390101;
+         }
+         
+         .a-size {
+           -webkit-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+           -moz-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+           -o-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+           transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+           /* ease-out */
+           -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           /* ease-out */
+           position: absolute;
+           width: 100%;
+           bottom: -20px;
+           font-family: 'PT Sans', sans-serif;
+           color: #e23b16;
+           opacity: 0;
+         }
+         
+         .a-size .size {
+           color: #252525;
+         }
+         
+         .cart {
+           display: block;
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           top: 0;
+           left: 0;
+           font-family: 'Lato', sans-serif;
+           font-weight: 700;
+         }
+         
+         .cart .price {
+           -webkit-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+           -moz-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+           -o-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+           transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+           /* ease-out */
+           -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           /* ease-out */
+           -webkit-transition-delay: 100ms;
+           -o-transition-delay: 100ms;
+           transition-delay: 100ms;
+           display: block;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           -webkit-transform: translate(-50%, -50%);
+           -ms-transform: translate(-50%, -50%);
+           -o-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+           font-size: 16px;
+           color: #252525;
+         }
+         
+         .cart .add-to-cart {
+           -webkit-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+           -moz-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+           -o-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+           transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+           /* ease-out */
+           -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+           /* ease-out */
+           -webkit-transition-delay: 100ms;
+           -o-transition-delay: 100ms;
+           transition-delay: 100ms;
+           display: block;
+           position: absolute;
+           top: 50%;
+           left: 120%;
+           -webkit-transform: translate(-50%, -50%);
+           -ms-transform: translate(-50%, -50%);
+           -o-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+         }
+         
+         .cart .add-to-cart .txt {
+           font-size: 12px;
+           color: #fff;
+           letter-spacing: 0.045em;
+           text-transform: uppercase;
+           white-space: nowrap;
+         }
+         
+             
+         </style>
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="logo"><a href="index.html"><img src="logo.png"></a></div>
+            <style>
+               .logo{
+                  background-color: white;
+                  width: 250px;
+                  border-radius: 10px;
+                  height: 100px;
+                  align-items: center;
+                  display: flex;
+               }
+            </style>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+               <div class="navbar-nav">
+                  <a class="nav-item nav-link" href="index.html">Home</a>
+                  <a class="nav-item nav-link" href="about.html">About</a>
+                  <a class="nav-item nav-link" href="services.html">Services</a>
+                  <a class="nav-item nav-link" href="products.html">Our Products</a>
+                  <a class="nav-item nav-link" href="contact.html">Contact us</a>
+               </div>
+            </div>
+            
+         </nav>
+         <!-- banner section end -->
+         <div class="banner_section layout_padding">
+            <div id="main_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <h1 class="banner_taital">Dedicated<br> <span style="color: #fff;">To Nurturing Crops</span></h1>
+                              <p class="banner_text">Empowering Agriculture with Advanced Pesticides for Healthier Yields
+
+                              </p>
+                              <div class="read_bt"><a href="#">Read More</a></div>
+                           </div>
+                           <div class="col-md-6">
+                              <div><img src="pman.jpg" class="image_1"></div><span></span>
+                           </div>
+                        </div>
+                        <div class="custum_menu">
+                           <ul>
+                              <li class="active"><a href="index.html">Home</a></li>
+                              <li><a href="about.html">About</a></li>
+                              <li><a href="services.html">Services</a></li>
+                              <li><a href="products.html">Our Products</a></li>
+                              <li><a href="contact.html">Contact us</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <h1 class="banner_taital">Dedicated<br> <span style="color: #fff;">To Nurturing Crops</span></h1>
+                              <p class="banner_text">Empowering Agriculture with Advanced Pesticides for Healthier Yields
+       <div class="read_bt"><a href="#">Read More</a></div>
+                           </div>
+                           <div class="col-md-6">
+                              <div><img src="p8.jpg" class="image_1"></div>
+                           </div>
+                        </div>
+                        <div class="custum_menu">
+                           <ul>
+                              <li class="active"><a href="index.html">Home</a></li>
+                              <li><a href="about.html">About</a></li>
+                              <li><a href="services.html">Services</a></li>
+                              <li><a href="products.html">Our Products</a></li>
+                              <li><a href="contact.html">Contact us</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <h1 class="banner_taital">Dedicated<br> <span style="color: #fff;">To Nurturing Crops</span></h1>
+                              <p class="banner_text">Empowering Agriculture with Advanced Pesticides for Healthier Yields
+  <div class="read_bt"><a href="#">Read More</a></div>
+                           </div>
+                           <div class="col-md-6">
+                              <div><img src="images/img-1.png" class="image_1"></div>
+                           </div>
+                        </div>
+                        <div class="custum_menu">
+                           <ul>
+                              <li class="active"><a href="index.html">Home</a></li>
+                              <li><a href="about.html">About</a></li>
+                              <li><a href="services.html">Services</a></li>
+                              <li><a href="products.html">Our Products</a></li>
+                              <li><a href="contact.html">Contact us</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="next">
+               <i class="fa fa-angle-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+               <i class="fa fa-angle-right"></i>
+               </a>
+            </div>
+         </div>
+         <!-- banner section end -->
+      </div>
+      <!-- header section end -->
+      <!-- Product section start -->
+      <div class="services_section layout_padding">
+         <div class="container">
+            <h1 class="services_taital">Products</h1>
+            <div class=" ">
+               <div class="row">
+                  
+                  <div class="col-md-4">
+                     <div class="container page-wrapper">
+                        <div class="page-inner">
+                          <div class="row">
+                            <div class="el-wrapper">
+                              <div class="box-up">
+                                <img class="img" src="data:image/jpeg;base64,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" alt="">
+                                <div class="img-info">
+                                  <div class="info-inner">
+                                    <span class="p-name">Our Products</span>
+                                    <span class="p-company">Yeezy</span>
+                                  </div>
+                                  <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                                </div>
+                              </div>
+                      
+                              <div class="box-down">
+                                <div class="h-bg">
+                                  <div class="h-bg-inner"></div>
+                                </div>
+                      
+                                <a class="cart" href="#">
+                                  <span class="price">$120</span>
+                                  <span class="add-to-cart">
+                                    <span class="txt">Add in cart</span>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      
+
+                  </div>
+                  <div class="col-md-4">
+                     <div class="container page-wrapper">
+                        <div class="page-inner">
+                          <div class="row">
+                            <div class="el-wrapper">
+                              <div class="box-up">
+                                <img class="img" src="data:image/jpeg;base64,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" alt="">
+                                <div class="img-info">
+                                  <div class="info-inner">
+                                    <span class="p-name">Our</span>
+                                    <span class="p-company">Yeezy</span>
+                                  </div>
+                                  <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                                </div>
+                              </div>
+                      
+                              <div class="box-down">
+                                <div class="h-bg">
+                                  <div class="h-bg-inner"></div>
+                                </div>
+                      
+                                <a class="cart" href="#">
+                                  <span class="price">$120</span>
+                                  <span class="add-to-cart">
+                                    <span class="txt">Add in cart</span>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      
+
+                  </div>
+                  <div class="col-md-4">
+                     <div class="container page-wrapper">
+                        <div class="page-inner">
+                          <div class="row">
+                            <div class="el-wrapper">
+                              <div class="box-up">
+                                <img class="img" src="p2.jpeg"  >    <div class="img-info">
+                                  <div class="info-inner">
+                                    <span class="p-name">Product name</span>
+                                    <span class="p-company">₹:600</span>
+                                  </div>
+                                  <div class="a-size">Available sizes: <span class="size"></span></div>
+                                </div>
+                              </div>
+                      
+                              <div class="box-down">
+                                <div class="h-bg">
+                                  <div class="h-bg-inner"></div>
+                                </div>
+                      
+                                <a class="cart" href="#">
+                                  <span class="price">₹:600</span>
+                                  <span class="add-to-cart">
+                                    <span class="txt">Add in cart</span>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      
+
+                  </div>
+               </div>
+            </div>
+            
+            <div class="read_bt_1"><a href="#">Read More</a></div>
+         </div>
+      </div>
+      <!-- services section end -->
+      <!-- about section start -->
+      <div class="about_section layout_padding">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="about_main">
+                     <h1 class="about_taital">About Our Farm</h1>
+                     <p class="about_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                     <div class="readmore_bt"><a href="#">Read More</a></div>
+                  </div>
+               </div>
+               <div class="col-md-6 padding_0">
+                  <div class="image_7"><img src="images/img-7.png"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- about section end -->
+      <!-- resources section start -->
+      <div class="resources_section">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="resources_main">
+                     <h1 class="resources_taital">Resources for Farming</h1>
+                     <h6 class="resources_taital_1">Go green, go natural....we love to help you!</h6>
+                     <p class="resources_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as</p>
+                     <div class="readmore_bt_1"><a href="#">Read More</a></div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div><img src="images/p14.png" class="image_8"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- resources section end -->
+      <!-- choose section star -->
+      <div class="choose_section layout_padding">
+         <div class="container">
+            <h1 class="choose_taital">Why Choose Us</h1>
+            <p class="choose_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its</p>
+            <div class="choose_section_2 layout_padding">
+               <div class="row">
+                  <div class="col-sm-4">
+                     <div class="icon_1"><img src="images/icon-1.png"></div>
+                     <h2 class="farm_text">Best Farm</h2>
+                     <p class="dummy_text">t is a long establi shed fact that a reader will be distracted by the readable content</p>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="icon_1"><img src="images/icon-1.png"></div>
+                     <h2 class="farm_text">Fresh <br>Food and vegetables</h2>
+                     <p class="dummy_text">t is a long establi shed fact that a reader will be distracted by the readable content</p>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="icon_1"><img src="images/icon-1.png"></div>
+                     <h2 class="farm_text">100%Pure</h2>
+                     <p class="dummy_text">t is a long establi shed fact that a reader will be distracted by the readable content</p>
+                  </div>
+               </div>
+            </div>
+            <div class="read_bt_1"><a href="#">Read More</a></div>
+         </div>
+      </div>
+      <!-- choose section end -->
+      <!-- newsletter section start -->
+      <div class="newsletter_section layout_padding">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="newsletter_main">
+                     <h1 class="newsletter_taital">Subscribe Our Newsletter</h1>
+                     <p class="newsletter_text">It is a long established fact that a reader will be distracted by the readable content of a page when </p>
+                     <input type="text" class="mail_text" placeholder="Enter Your Email" name="Enter Your Email">
+                     <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+                  </div>
+               </div>
+               <div class="col-md-6 padding_right_0">
+                  <div class="image_12"><img src="images/img-12.png"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- newsletter section end -->
+      <!-- client section start -->
+      <div class="client_section layout_padding">
+         <div class="container">
+            <h1 class="choose_taital">What says our cutomers</h1>
+            <p class="choose_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its</p>
+            <div id="my_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="client_section_2 layout_padding">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <h2 class="siaalya_text">Siaalya</h2>
+                              <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable cIt is a long established fact that a reader will be distracted by the readable c</p>
+                              <div class="quite_icon">
+                                 <a href="#">
+                                    <img src="images/quite-icon.png">
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                           <h2 class="siaalya_text">Siaalya</h2>
+                           <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable cIt is a long established fact that a reader will be distracted by the readable c</p>
+                           <div class="quite_icon"><a href="#"><img src="images/quite-icon.png"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                  <div class="client_section_2 layout_padding">
+                  <div class="row">
+                  <div class="col-md-6">
+                  <h2 class="siaalya_text">Siaalya</h2>
+                  <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable cIt is a long established fact that a reader will be distracted by the readable c</p>
+                  <div class="quite_icon"><a href="#"><img src="images/quite-icon.png"></div>
+                  </div>
+                  <div class="col-md-6">
+                  <h2 class="siaalya_text">Siaalya</h2>
+                  <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable cIt is a long established fact that a reader will be distracted by the readable c</p>
+                  <div class="quite_icon"><a href="#"><img src="images/quite-icon.png"></div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="carousel-item">
+                  <div class="client_section_2 layout_padding">
+                  <div class="row">
+                  <div class="col-md-6">
+                  <h2 class="siaalya_text">Siaalya</h2>
+                  <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable cIt is a long established fact that a reader will be distracted by the readable c</p>
+                  <div class="quite_icon"><a href="#"><img src="images/quite-icon.png"></a></div>
+                  </div>
+                  <div class="col-md-6">
+                  <h2 class="siaalya_text">Siaalya</h2>
+                  <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable cIt is a long established fact that a reader will be distracted by the readable c</p>
+                  <div class="quite_icon"><a href="#"><img src="images/quite-icon.png"></a></div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="next">
+               <i class="fa fa-arrow-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+               <i class="fa fa-arrow-right"></i>
+               </a>
+            </div>
+         </div>
+         <!-- contact section start -->  
+         <div class="contact_section layout_padding">
+            <div class="container" >
+               <h1 class="contact_text">  Contact us</h1>
+            </div>
+         </div>
+         <div class="contact_section_2 layout_padding">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="mail_main">
+                        <form action="/action_page.php">
+                           <div class="form-group">
+                              <input type="text" class="email-bt" placeholder="Name" name="Name">
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="email-bt" placeholder="Email" name="Email">
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="email-bt" placeholder="Subject" name="Email">
+                           </div>
+                           <div class="form-group">
+                              <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="text"></textarea>
+                           </div>
+                        </form>
+                        <div class="send_btn">
+                           <div class="main_bt"><a href="#">Send</a></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div><img src="family.jpg" class="image_13"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- contact section end --> 
+      </div>
+      <!-- client section end --> 
+      <!-- footer section start --> 
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3 col-sm-6">
+                  <h2 class="useful_text">About</h2>
+                  <p class="ipsum_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised</p>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h2 class="useful_text">Services</h2>
+                  <div class="footer_links">
+                     <ul>
+                        <li class="active"><a href="#">Farm</a></li>
+                        <li><a href="#">Agriculture</a></li>
+                        <li><a href="#">Vegetables</a></li>
+                        <li><a href="#">Fruit</a></li>
+                        <li><a href="#">And more</a></li>
+                     </ul>
+                  </div>
+               </div>
+               
+               <div class="col-lg-3 col-sm-6">
+                  <h2 class="useful_text">contact us</h2>
+                  <div class="addres_link">
+                     <ul>
+                        <li><a href="#"><img src="images/map-icon.png"><span class="padding_left_10">There are many vari</span></a></li>
+                        <li><a href="#"><img src="images/call-icon.png"><span class="padding_left_10">+01 1234567890</span></a></li>
+                        <li><a href="#"><img src="images/mail-icon.png"><span class="padding_left_10">demo@gmail.com</span></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->  
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Copyright 2022 All Right Reserved By.<a href="https://html.design"> Free  html Templates</p>
+         </div>
+      </div>
+      <!-- copyright section end -->    
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script>
+         $(document).ready(function(){
+         $(".fancybox").fancybox({
+            openEffect: "none",
+            closeEffect: "none"
+            });
+            
+      </script>
+   </body>
+</html>
